@@ -1,0 +1,19 @@
+# Model checkpoints
+checkpoints/*
+!checkpoints/best_resunet_exp5.keras
+
+# Virtual environment
+nightwatch_env/
+venv/
+.venv/
+
+# Dataset
+dataset/
+*.zip
+
+# Python temporary files
+__pycache__/
+*.pyc
+
+# Secrets
+.streamlit/secrets.toml
