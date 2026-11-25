@@ -1,15 +1,17 @@
+
 # Model checkpoints
 checkpoints/*
 !checkpoints/best_resunet_exp5.keras
 
-# Virtual environment
+# Virtual environments
 nightwatch_env/
 venv/
 .venv/
 
-# Dataset
+# Datasets
 dataset/
-*.zip
+datasets/
+LOLDataset/
 
 # Python temporary files
 __pycache__/
@@ -17,3 +19,10 @@ __pycache__/
 
 # Secrets
 .streamlit/secrets.toml
+
+# Temporary archives
+*.zip
+
+# Temporary files
+*.log
+.DS_Store

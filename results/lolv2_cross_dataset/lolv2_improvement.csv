@@ -1,0 +1,7 @@
+Stage,Metric,Mean_Improvement,Improved_Images,Unchanged_Images,Deteriorated_Images,Images_Compared
+Adaptive_Gamma_CLAHE,PSNR,0.9855442810058593,71,0,29,100
+Adaptive_Gamma_CLAHE,SSIM,0.026132447123527528,76,0,24,100
+Adaptive_Gamma_CLAHE,MAE,0.014784878566861153,67,0,33,100
+Full_NightWatch,PSNR,1.1562326622009278,67,0,33,100
+Full_NightWatch,SSIM,0.01877031445503235,69,0,31,100
+Full_NightWatch,MAE,0.017254805006086827,67,0,33,100

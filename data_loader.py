@@ -3,10 +3,10 @@ import numpy as np
 import tensorflow as tf
 
 # Dataset configuration
-PROJECT_DIR = "/content/NightWatch"
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 DATASET_DIR = os.path.join(
-    PROJECT_DIR, "dataset", "LOL", "lol_dataset"
+    PROJECT_DIR, "LOLDataset"
 )
 
 IMAGE_SIZE = (256, 384)  # Height, Width
