@@ -1,9 +1,5 @@
-
 tensorflow==2.20.0
 streamlit==1.67.0
-opencv-python
-numpy
-pandas
-matplotlib
+numpy==2.1.3
+opencv-python-headless
 Pillow
-scikit-image
