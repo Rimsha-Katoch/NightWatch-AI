@@ -1,5 +1,7 @@
 # 🌙 NightWatch AI
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=streamlit)](https://67ft7krd646tqebhmbd6kp.streamlit.app/)
+
 ### Adaptive Low-Light Image Enhancement Using Residual Attention U-Net
 
 **See beyond the darkness.**
@@ -22,7 +24,29 @@ The project integrates:
 - HSV-based saturation adjustment for improved colour appearance.
 - Streamlit-based interactive application for image processing.
 
-## 🎯 2. Project Objectives
+---
+
+## 🌐 2. Live Deployment
+
+NightWatch AI is deployed using **Streamlit Community Cloud**, allowing users to access and experience the image enhancement system directly through their web browser.
+
+### 🚀 Live Application
+
+**[Launch NightWatch AI](https://67ft7krd646tqebhmbd6kp.streamlit.app/)**
+
+Users can:
+
+- Upload low-light photographs.
+- Generate enhanced images using the trained Residual Attention U-Net.
+- Apply adaptive image refinement.
+- Compare original and enhanced images.
+- View the final enhancement results.
+
+**Note:** The application may take a few moments to initialize depending on hosting availability and resource usage.
+
+---
+
+## 🎯 3. Project Objectives
 
 - Enhance images captured in low-light environments.
 - Improve brightness, contrast, and colour visibility.
@@ -31,7 +55,9 @@ The project integrates:
 - Develop an interactive application for image enhancement.
 - Evaluate enhancement performance using quantitative metrics.
 
-## 🏗️ 3. System Architecture
+---
+
+## 🏗️ 4. System Architecture
 
 The NightWatch AI pipeline consists of the following stages:
 
@@ -42,49 +68,61 @@ The NightWatch AI pipeline consists of the following stages:
 5. **Saturation Adjustment:** Apply controlled HSV saturation enhancement.
 6. **Final Output:** Resize the enhanced result to the original image dimensions and display the comparison.
 
-## 🧠 4. Model Architecture
+---
 
-The selected model is a custom Residual Attention U-Net.
+## 🧠 5. Model Architecture
 
-**Model specifications:**
+The selected model is a custom **Residual Attention U-Net**.
 
-- Architecture: Residual Attention U-Net
-- Input dimensions: 256 × 384 × 3
-- Output dimensions: 256 × 384 × 3
-- Total parameters: 2,082,423
-- Selected checkpoint: `best_resunet_exp5.keras`
+### Model Specifications
 
-The architecture incorporates:
+| Specification       | Details                   |
+| ------------------- | ------------------------- |
+| Architecture        | Residual Attention U-Net  |
+| Input Dimensions    | 256 × 384 × 3             |
+| Output Dimensions   | 256 × 384 × 3             |
+| Total Parameters    | 2,082,423                 |
+| Selected Checkpoint | `best_resunet_exp5.keras` |
+
+### Key Architectural Components
 
 - Residual convolutional blocks.
 - Attention gates for skip connections.
 - Encoder-decoder structure.
 - Residual image correction output.
 
-## ✨ 5. Adaptive Image Refinement
+---
 
-After deep learning inference, the predicted image passes through an adaptive refinement pipeline.
+## ✨ 6. Adaptive Image Refinement
+
+After deep learning inference, the predicted image passes through an adaptive refinement pipeline to further improve its visual quality.
 
 ### Gamma Correction
 
-Uses an image-dependent gamma value to adjust image luminance.
+Uses an image-dependent gamma value to adjust image luminance and improve visibility in dark regions.
 
 ### CLAHE
 
-Contrast Limited Adaptive Histogram Equalization improves local contrast and visibility.
+Contrast Limited Adaptive Histogram Equalization improves local contrast and enhances details in different image regions.
 
 ### Saturation Adjustment
 
-A controlled HSV saturation multiplier of 1.75 improves colour appearance.
+A controlled HSV saturation multiplier of **1.75** improves colour appearance and visual vibrancy.
 
 These operations are integrated into the final enhancement pipeline.
 
-## 🧪 6. Dataset and Experimental Evaluation
+---
 
-The project uses the LOL (Low-Light) dataset, containing paired low-light and normal-light images.
+## 🧪 7. Dataset and Experimental Evaluation
 
-- Training and validation: `our485`
-- Independent evaluation: `eval15`
+The project uses the **LOL (Low-Light) Dataset**, containing paired low-light and normal-light images.
+
+### Dataset Configuration
+
+| Dataset Component | Usage                   |
+| ----------------- | ----------------------- |
+| `our485`          | Training and validation |
+| `eval15`          | Independent evaluation  |
 
 The dataset is not included in this repository.
 
@@ -94,13 +132,19 @@ The selected model was evaluated on the independent evaluation set.
 
 | Evaluation Metric | Baseline Model | Adaptive Pipeline |
 | ----------------- | -------------: | ----------------: |
-| PSNR              |       13.57925 |          15.29112 |
-| SSIM              |        0.68909 |           0.73463 |
-| MAE               |        0.19584 |           0.15734 |
+| PSNR              |       13.57925 |      **15.29112** |
+| SSIM              |        0.68909 |       **0.73463** |
+| MAE               |        0.19584 |       **0.15734** |
 
 The adaptive refinement pipeline improved all three reported metrics in this evaluation.
 
-## 🛠️ 7. Technologies Used
+- **PSNR:** Increased, indicating improved reconstruction quality.
+- **SSIM:** Increased, indicating better structural similarity.
+- **MAE:** Decreased, indicating lower average absolute error.
+
+---
+
+## 🛠️ 8. Technologies Used
 
 | Category             | Technologies      |
 | -------------------- | ----------------- |
@@ -113,7 +157,9 @@ The adaptive refinement pipeline improved all three reported metrics in this eva
 | Frontend             | Streamlit         |
 | Model Format         | Keras             |
 
-## 💻 8. Application Features
+---
+
+## 💻 9. Application Features
 
 - Dark-themed interactive dashboard.
 - Low-light image upload.
@@ -124,7 +170,9 @@ The adaptive refinement pipeline improved all three reported metrics in this eva
 - Processing-time display.
 - Model architecture and inference information.
 
-## 📂 9. Project Structure
+---
+
+## 📂 10. Project Structure
 
 ```text
 NightWatch-AI/
@@ -159,47 +207,60 @@ NightWatch-AI/
 ├── evaluate_resunet.py
 ├── evaluate_resunet_aug.py
 ├── .gitignore
+├── requirements.txt
 └── README.md
 ```
 
-## 🚀 10. Installation and Execution
+---
 
-### Step 1: Clone the repository
+## 🚀 11. Installation and Execution
+
+Follow these steps to run NightWatch AI locally.
+
+### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/Rimsha-Katoch/NightWatch-AI.git
 cd NightWatch-AI
 ```
 
-### Step 2: Create a virtual environment
+### Step 2: Create a Virtual Environment
 
 ```bash
 python -m venv nightwatch_env
 ```
 
-### Step 3: Activate the environment
+### Step 3: Activate the Environment
 
-Windows PowerShell:
+**Windows PowerShell:**
 
 ```powershell
 .\nightwatch_env\Scripts\Activate.ps1
 ```
 
-### Step 4: Install dependencies
+### Step 4: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 5: Run the application
+### Step 5: Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
-**Note:** The `requirements.txt` file will be added separately. The dataset is not included, and the selected trained model checkpoint is included in the repository.
+The application will open in your default web browser.
 
-## 📸 11. Application Screenshots
+**Note:**
+
+- The dataset is not included in this repository.
+- The selected trained model checkpoint is included in the repository.
+- The `requirements.txt` file contains the required Python dependencies.
+
+---
+
+## 📸 12. Application Screenshots
 
 ### Home Dashboard
 
@@ -243,7 +304,9 @@ Visual comparison between the original and NightWatch-enhanced images.
 
 ![Enhancement Results](screenshots/enhancement_results.png)
 
-## 🔮 12. Future Scope
+---
+
+## 🔮 13. Future Scope
 
 - Extension to low-light video enhancement.
 - Real-time image enhancement.
@@ -251,10 +314,20 @@ Visual comparison between the original and NightWatch-enhanced images.
 - Evaluation on additional low-light datasets.
 - Deployment as a cloud-based application.
 
-## 👥 13. Project Repository
+---
 
-**GitHub:** https://github.com/Rimsha-Katoch/NightWatch-AI
+## 👥 14. Project Repository
+
+**GitHub Repository:**
+
+[https://github.com/Rimsha-Katoch/NightWatch-AI](https://github.com/Rimsha-Katoch/NightWatch-AI)
+
+**Live Application:**
+
+[https://67ft7krd646tqebhmbd6kp.streamlit.app/](https://67ft7krd646tqebhmbd6kp.streamlit.app/)
 
 ---
 
-**NightWatch AI — Making low-light images clearer through adaptive deep learning.**
+**🌙 NightWatch AI — Making low-light images clearer through adaptive deep learning.**
+
+_See beyond the darkness._
